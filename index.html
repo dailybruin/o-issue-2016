@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <title>Orientation Issue</title>
   <meta http-equiv="Content-Type" content="text/html">
-  <!-- Include meta tag to ensure proper rendering and touch zooming -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Include meta tag to ensure proper rendering and touch zooming -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,10 +17,17 @@
   <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Handlebars CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+  <!-- Our own JS and CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script type="text/javascript" src="js/scrollview.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+  <!-- This code is where the article preview boxes and landing page will be -->
   <div class="container-fluid" data-role="page" id="main-page">
     <div class="row header">
       <h1>Orientation Issue</h1>
@@ -59,23 +64,30 @@
 
     <div class="row">
       <div data-position="right" class="notViewed animBlock floatr">
-        <h3>Four Article</h3>
+        <h3>Five Article</h3>
         <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
       </div>
     </div>
-  </div>
+  </div> <!-- End div for main page with article preview box and landing page -->
 
+  <!-- This will be templatized with handlebars and contain the content for each story -->
   <div data-role="page" id="pagetwo">
     <div data-role="header">
-      <h1>Welcome To My Homepage</h1>
+      <h1>This will be an article template</h1>
     </div>
-
+    <div id="handlebars-content"></div>
     <div data-role="main" class="ui-content">
-    <p>Click on the link to see the slide effect REVERSED (slides to the previous page from left to right).</p>
-    <a href="#" data-rel="back" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+    <a href="#" data-rel="back" data-transition="slide" data-direction="reverse">GO BACK TO MAIN PAGE(reversed)</a>
     </div>
-
   </div> <!-- end container -->
 
+  <!-- Handle bar template content -->
+  <script id="handlebars" type="text/x-handlebars-template">
+    {{#each .}}
+    <div>
+      The headline is {{ this.gsx$articleheadline.$t }}. The author name is {{this.gsx$authors.$t}}.
+    </div>
+    {{/each}}
+   </script>
 </body>
 </html>
