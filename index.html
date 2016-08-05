@@ -50,7 +50,7 @@
 
   <script id="tile" type="text/x-handlebars-template">
     {{#each .}}
-    <a class="tile" href="#article{{@index}}"><li><p>Article{{@index}}</p></li></a>
+    <a class="tile" href="#article{{@index}}"><li style="background-image: url('{{this.gsx$mainimage.$t}}')"><p>Article{{@index}}</p></li></a>
     {{/each}}
     
   </script>

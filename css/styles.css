@@ -49,6 +49,7 @@ html[xmlns] .clearfix { display: block; }
   width: 300px;
   height: 200px;
   background: red;
+  background-size: cover;
   margin-right: 30px;
 }
 

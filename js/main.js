@@ -13,6 +13,7 @@ $( document ).ready(function() {
   	success: function(data) {
   			data = data.feed.entry;
 
+        $('#tile-container').css('width', data.length * 350);
         // The code below is for handlebars ---===
         // Retrieve the template data from the HTML (jQuery is used here).
         var template = $('#article').html();
