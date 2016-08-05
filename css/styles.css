@@ -4,10 +4,28 @@
 }
 
 .image-section{
-  padding: 30px;
+  padding: 60px 0px;
+}
+
+.header-section{
+  padding: 150px 0px;
+}
+
+.main-story{
+  font-size: 18px;
 }
 
 .article-image{
   max-width: 100%;
   height: auto;
+  float: left;
+}
+
+.back-section{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.back-button{
+  text-align:center;
 }

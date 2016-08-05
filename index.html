@@ -148,29 +148,37 @@
 
   <!-- This will be templatized with handlebars and contain the content for each story -->
   <div data-role="page" id="pagetwo">
-    <div data-role="header">
-      <h1>This will be an article template</h1>
-    </div>
     <div id="handlebars-content"></div>
-
   </div> <!-- end container -->
 
   <!-- Handle bar template content - this is what each article is gonna look like -->
   <script id="handlebars" type="text/x-handlebars-template">
     {{#each .}}
     <div class="container-fluid">
-      <a href="#" data-rel="back" data-transition="slide" data-direction="reverse">GO BACK TO MAIN PAGE(reversed)</a>
       <div class="row">
-        <div class="col-lg-6 image-section">
+        <div class="col-lg-5 col-lg-offset-1 image-section">
           <img src="{{this.gsx$mainimage.$t}}" class="article-image"/>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4 col-lg-offset-1 header-section" >
           <h1>{{ this.gsx$articleheadline.$t }}</h1>
           <h3>by {{ this.gsx$authors.$t }}</h3>
         </div>
       </div>
-      <div class = "row">
-        {{{ this.gsx$articlecontent.$t }}}
+      <div class="row">
+        <div class="col-lg-3">
+          <!--Pictures here-->
+        </div>
+        <div class="col-lg-6 main-story">
+          {{{ this.gsx$articlecontent.$t }}}
+        </div>
+        <div class="col-lg-3">
+          <!--Pictures here-->
+        </div>
+      </div>
+      <div class="row back-section">
+        <div class="col-lg-6 col-lg-offset-3 back-button" >
+          <button><a href="#" data-rel="back" data-transition="slide" data-direction="reverse">Back to Orientation Issue!</a></button>
+        </div>
       </div>
     </div>
     {{/each}}
