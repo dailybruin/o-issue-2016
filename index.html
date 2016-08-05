@@ -7,6 +7,7 @@
 
   <!-- Include meta tag to ensure proper rendering and touch zooming -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <!-- Include jQuery Mobile stylesheets -->
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <!-- Include the jQuery library -->
@@ -21,52 +22,127 @@
   <!-- Handlebars CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
   <!-- Our own JS and CSS -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script type="text/javascript" src="js/scrollview.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
   <!-- This code is where the article preview boxes and landing page will be -->
-  <div class="container-fluid" data-role="page" id="main-page">
+  <div class="container" data-role="page" id="main-page">
     <div class="row header">
       <h1>Orientation Issue</h1>
-      
     </div>
     <div class="row">
-      <div data-position="right" class="notViewed animBlock floatr">
+      <div class="notViewed">
         <h3>One Article</h3>
-        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="fade"> Add an animation to take you to the article content!</a></p>
       </div>
     </div>
 
     <div class="row">
-      <div data-position="left" class="notViewed animBlock floatr">
+      <div class="notViewed">
         <h3>Two Article</h3>
         <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
       </div>
     </div>
 
     <div class="row">
-      <div data-position="right" class="notViewed animBlock floatr">
+      <div class="notViewed">
         <h3>Three Article</h3>
         <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
       </div>
     </div>
 
     <div class="row">
-      <div data-position="left" class="notViewed animBlock floatr">
+      <div class="notViewed">
         <h3>Four Article</h3>
         <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
       </div>
     </div>
 
     <div class="row">
-      <div data-position="right" class="notViewed animBlock floatr">
+      <div class="notViewed">
         <h3>Five Article</h3>
         <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
       </div>
     </div>
+
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Three Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Four Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Five Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="notViewed">
+        <h3>Three Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Four Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Five Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="notViewed">
+        <h3>Three Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Four Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Five Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="notViewed">
+        <h3>Three Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="notViewed">
+        <h3>Four Article</h3>
+        <p>This will take you to another article<a href="#pagetwo" data-transition="slide"> Add an animation to take you to the article content!</a></p>
+      </div>
+    </div>
+
   </div> <!-- End div for main page with article preview box and landing page -->
 
   <!-- This will be templatized with handlebars and contain the content for each story -->
@@ -75,16 +151,26 @@
       <h1>This will be an article template</h1>
     </div>
     <div id="handlebars-content"></div>
-    <div data-role="main" class="ui-content">
-    <a href="#" data-rel="back" data-transition="slide" data-direction="reverse">GO BACK TO MAIN PAGE(reversed)</a>
-    </div>
+
   </div> <!-- end container -->
 
-  <!-- Handle bar template content -->
+  <!-- Handle bar template content - this is what each article is gonna look like -->
   <script id="handlebars" type="text/x-handlebars-template">
     {{#each .}}
-    <div>
-      The headline is {{ this.gsx$articleheadline.$t }}. The author name is {{this.gsx$authors.$t}}.
+    <div class="container-fluid">
+      <a href="#" data-rel="back" data-transition="slide" data-direction="reverse">GO BACK TO MAIN PAGE(reversed)</a>
+      <div class="row">
+        <div class="col-lg-6 image-section">
+          <img src="{{this.gsx$mainimage.$t}}" class="article-image"/>
+        </div>
+        <div class="col-lg-6">
+          <h1>{{ this.gsx$articleheadline.$t }}</h1>
+          <h3>by {{ this.gsx$authors.$t }}</h3>
+        </div>
+      </div>
+      <div class = "row">
+        {{{ this.gsx$articlecontent.$t }}}
+      </div>
     </div>
     {{/each}}
    </script>
