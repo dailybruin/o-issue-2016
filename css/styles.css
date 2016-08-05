@@ -3,7 +3,7 @@ html, body {
   width: 100%;
 }
 
-.container-fluid {
+.container {
   height: 100%;
 }
 
@@ -17,9 +17,10 @@ html, body {
   padding: 0px;
 }
 
+
 #main-page{
   /*jquery mobile's frame causes an overflow, dont know why =/ */
-  overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 .image-section{
