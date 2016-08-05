@@ -27,10 +27,27 @@ $( document ).ready(function() {
 
 
 
-        var template2 = $('#thumbnail').html();
+        var template2 = $('#tile').html();
         var templateScript2 = Handlebars.compile(template2);
         var html2 = templateScript2(context);
         $('#tile-container').append(html2);
+
+
+        $('#tile-container').hover(function() {
+          $('.tile').hover(function() {
+            $(this).css({
+              "opacity": "1"
+            })
+            $(this).siblings().css({
+              "opacity" : "0.4"
+            });
+          });
+
+        }, function() {
+          $(this).children().css({
+            "opacity" : "1"
+          });
+        });
 
 
 
