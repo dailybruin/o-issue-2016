@@ -8,7 +8,6 @@ html, body {
 }
 
 .header{
-  text-align: center;
   height: 100%;
   background-image: url('../img/oissuecoveredit.jpg');
   background-size: cover;
@@ -17,6 +16,21 @@ html, body {
   padding: 0px;
 }
 
+h1 {
+   text-align: center;
+   text-transform: uppercase;
+   border: 1px solid white;
+   padding: 20px;
+   margin: auto;
+   width: 40%;
+   min-width: 300px;
+   top: 50%;
+   left: 50%;
+   position: absolute;
+   transform: translateX(-50%);
+   background-color: rgba(255, 255, 255, 0.8);
+   color: black;
+ }
 
 #main-page{
   /*jquery mobile's frame causes an overflow, dont know why =/ */
