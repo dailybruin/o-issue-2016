@@ -2,29 +2,41 @@
   display: none;
 }
 
-#main-page{
-  /*jquery mobile's frame causes an overflow, dont know why =/ */
-    overflow-y: hidden;
+#main-page {
+  /*jquery mobile's frame causes an overflow, dont know why =/*/
+  overflow-y: hidden;
 }
 
-/*
-.styled-button {
-	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	color:#333;
-	background-color:#FA2;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border:none;
-	font-family:'Helvetica Neue', Arial, sans-serif;
-	font-size:16px;
-	font-weight:700;
-	height:36px;
-	padding:4px 16px;
-	text-shadow:#FE6 0 1px 0
-}*/
+.button-one {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.button-one:hover {
+  cursor: pointer;
+}
+
+.button-two {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.button-two-link {
+  text-decoration: none;
+}
+
+.button-two-link:visited {
+  text-decoration: none;
+  color: white;
+}
 
 .navbar{
   position: fixed;
@@ -55,9 +67,3 @@
   margin-top: 30px;
   margin-bottom: 20px;
 }
-
-/*
-.back-button{
-  text-align:center;
-}
-*/
