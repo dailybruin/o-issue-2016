@@ -37,9 +37,9 @@
             </ul>
           </div>
         </div>
-        
+
       </div>
-      
+
     </div>
   </div> <!-- End div for main page with article preview box and landing page -->
 
@@ -51,7 +51,7 @@
     {{#each .}}
     <li><p><a href="#article{{@index}}" data-transition="fade">Article{{@index}}</a></p></li>
     {{/each}}
-    
+
   </script>
 
 
@@ -61,7 +61,7 @@
     <div data-role="page" id="article{{@index}}">
       <div class="container-fluid">
         <div class="row navbar">
-          <input type="submit" class="styled-button-1" value="Back to Orientation Issue!" />
+          <input type="submit" class="button-one" value="Back" />
         </div>
         <div class="row">
           <div class="col-lg-5 col-lg-offset-1 image-section">
@@ -87,7 +87,7 @@
           <div class="col-lg-6 col-lg-offset-3 back-button" >
           </div>
         </div>
-        <button><a href="#main-page" data-transition="fade">Back to Orientation Issue!</a></button>
+        <button><a href="#main-page" data-transition="fade">Back</a></button>
       </div>
     </div>
     {{/each}}
