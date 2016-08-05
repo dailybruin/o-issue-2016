@@ -1,41 +1,13 @@
-.header{
-  text-align: center;
-  background: url(http://www.nasa.gov/images/content/386913main_Swift_M31_large_UV.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+#main-page{
+  /*jquery mobile's frame causes an overflow, dont know why =/ */
+  overflow-y: hidden;
 }
 
-/** animated boxes **/
-.animBlock {
-  display: inline-block;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  position: relative;
-  -webkit-transition: all .55s ease-in;
-  -moz-transition: all .55s ease-in;
-  -ms-transition: all .55s ease-in;
-  -o-transition: all .55s ease-in;
-  transition: all .55s ease-in;
-}
-.animBlock[data-position="left"] { left: -20%; }
-.animBlock[data-position="right"] { right: -20%; }
-
-.animBlock[data-position="left"].viewed {
-  left: 0%;
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-.animBlock[data-position="right"].viewed {
-  right: 0%;
-  opacity: 1;
-  filter: alpha(opacity=100);
+.image-section{
+  padding: 30px;
 }
 
-/** clearfix **/
-.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.clearfix { display: inline-block; }
-
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }
+.article-image{
+  max-width: 100%;
+  height: auto;
+}
