@@ -3,23 +3,23 @@ html, body {
   width: 100%;
 }
 
-.container-fluid {
+.container {
   height: 100%;
 }
 
-.header{
+#main-page {
   text-align: center;
   height: 100%;
-  background-image: url('../oissuecoveredit.jpg');
+  background-image: url('../img/oissuecoveredit.jpg');
   background-size: cover;
-  background-attachment: fixed;
   background-position: center top;
   padding: 0px;
 }
 
+
 #main-page{
   /*jquery mobile's frame causes an overflow, dont know why =/ */
-  overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 .image-section{
