@@ -1,10 +1,4 @@
 $( document ).ready(function() {
-  $(document).one("mobileinit", function () {
-    // Setting #container div as a jqm pageContainer
-    $.mobile.pageContainer = $('#container');
-    // Setting default page transition to slide
-    $.mobile.defaultPageTransition = 'fade';
-  });
 
   //lets get some google spreadsheet data :D
   $.ajax({
@@ -37,7 +31,13 @@ $( document ).ready(function() {
   	}
   });
 
-
-
+  //for page transition to article
+  $(document).on('click', '.link', function(e) {
+      console.log($(this).attr('href'));
+      var articleID = $(this).attr('href')
+      $(articleID).removeClass('hidden');
+      $("#main-page").addClass('hidden');
+      e.preventDefault();
+  });
 
 });
