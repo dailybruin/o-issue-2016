@@ -7,12 +7,8 @@
 
   <!-- Include meta tag to ensure proper rendering and touch zooming -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <!-- Include jQuery Mobile stylesheets -->
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <!-- Include the jQuery library -->
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <!-- Include the jQuery Mobile library -->
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
   <!-- Handlebars CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
@@ -23,7 +19,6 @@
   <!-- Our own JS and CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/articleStyling.css">
-  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
   <!-- This code is where the article preview boxes and landing page will be -->
@@ -49,7 +44,7 @@
 
   <script id="thumbnail" type="text/x-handlebars-template">
     {{#each .}}
-    <li><p><a href="#article{{@index}}" data-transition="fade">Article{{@index}}</a></p></li>
+    <li><a href="#article{{@index}}" class="link">Article{{@index}}</a></li>
     {{/each}}
 
   </script>
@@ -58,7 +53,7 @@
   <!-- Handle bar template content - this is what each article is gonna look like -->
   <script id="article" type="text/x-handlebars-template">
     {{#each .}}
-    <div data-role="page" id="article{{@index}}">
+    <div id="article{{@index}}" class="hidden">
       <div class="container-fluid">
         <div class="row navbar">
           <input type="submit" class="button-one" value="Back" />
@@ -92,5 +87,6 @@
     </div>
     {{/each}}
   </script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

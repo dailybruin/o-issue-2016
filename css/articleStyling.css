@@ -1,3 +1,7 @@
+.hidden{
+  display: none;
+}
+
 #main-page{
   /*jquery mobile's frame causes an overflow, dont know why =/ */
     overflow-y: hidden;
