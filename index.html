@@ -34,7 +34,7 @@
         <div data-fluffy-container>
           <div data-fluffy-content>
             <ul id="tile-container">
-              <li><p><a href="#article0" data-transition="fade">Article0</a></p></li>
+              <!-- <li><p><a href="#article0" data-transition="fade">Article0</a></p></li>
               <li><p><a href="#article1" data-transition="fade">Article1</a></p></li>
               <li></li>
               <li></li>
@@ -43,7 +43,7 @@
               <li></li>
               <li></li>
               <li></li>
-              <li></li>
+              <li></li> -->
             </ul>
           </div>
         </div>
@@ -56,6 +56,13 @@
   <!-- This will be templatized with handlebars and contain the content for each story -->
   <div id="handlebars-content"></div>
   <!-- end container -->
+
+  <script id="thumbnail" type="text/x-handlebars-template">
+    {{#each .}}
+    <li><p><a href="#article0" data-transition="fade">Article0</a></p></li>
+    {{/each}}
+    
+  </script>
 
 
   <!-- Handle bar template content - this is what each article is gonna look like -->
