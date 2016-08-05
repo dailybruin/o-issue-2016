@@ -21,13 +21,11 @@ html, body {
    text-transform: uppercase;
    border: 1px solid white;
    padding: 20px;
-   margin: auto;
-   width: 40%;
+   margin: 0 auto;
+   display: block;
    min-width: 300px;
    top: 50%;
-   left: 50%;
-   position: absolute;
-   transform: translateX(-50%);
+   
    background-color: rgba(255, 255, 255, 0.8);
    color: black;
  }
@@ -35,20 +33,39 @@ html, body {
 html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
 
-.tile-container {
+
+.article-image{
+  max-width: 100%;
+  height: auto;
+}
+
+#tile-container {
   display: flex;
   width: 1500px;
+  padding-left: 0px;
 
 }
 
-.tile-container li {
+#tile-container li {
   list-style: none;
-  width: 300px;
+  width: 400px;
   height: 200px;
   background: red;
   margin-right: 30px;
 }
 
-.tile-container li:nth-child(odd) {
+#tile-container li:nth-child(odd) {
   margin-top: 10px;
+}
+
+#tile-wrapper {
+  z-index: 10000;
+  height: 200px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 75%;
 }

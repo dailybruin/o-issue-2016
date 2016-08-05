@@ -15,16 +15,30 @@ $( document ).ready(function() {
 
         // The code below is for handlebars ---===
         // Retrieve the template data from the HTML (jQuery is used here).
-        var template = $('#handlebars').html();
+        var template = $('#article').html();
         // Compile the template data into a function
         var templateScript = Handlebars.compile(template);
+        console.log(templateScript)
         var context = data;
         // html = 'My name is Ritesh Kumar. I am a developer.'
         var html = templateScript(context);
         // Insert the HTML code into the page
         $("#handlebars-content").replaceWith(html);
+
+
+
+        var template2 = $('#thumbnail').html();
+        var templateScript2 = Handlebars.compile(template2);
+        var html2 = templateScript2(context);
+        console.log(html2);
+        $('#tile-container').append(html2);
+
+
+
   	}
   });
+
+
 
 
 });
