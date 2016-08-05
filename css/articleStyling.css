@@ -1,0 +1,31 @@
+#main-page{
+  /*jquery mobile's frame causes an overflow, dont know why =/ */
+    overflow-y: hidden;
+}
+
+.image-section{
+  padding: 60px 0px;
+}
+
+.header-section{
+  padding: 150px 0px;
+}
+
+.main-story{
+  font-size: 18px;
+}
+
+.article-image{
+  max-width: 100%;
+  height: auto;
+  float: left;
+}
+
+.back-section{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.back-button{
+  text-align:center;
+}

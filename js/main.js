@@ -1,6 +1,11 @@
 $( document ).ready(function() {
+  $(document).one("mobileinit", function () {
+    // Setting #container div as a jqm pageContainer
+    $.mobile.pageContainer = $('#container');
+    // Setting default page transition to slide
+    $.mobile.defaultPageTransition = 'fade';
+  });
 
-  
   //lets get some google spreadsheet data :D
   $.ajax({
     dataType: "json",
@@ -17,7 +22,7 @@ $( document ).ready(function() {
         // html = 'My name is Ritesh Kumar. I am a developer.'
         var html = templateScript(context);
         // Insert the HTML code into the page
-        $("#handlebars-content").append(html);
+        $("#handlebars-content").replaceWith(html);
   	}
   });
 
