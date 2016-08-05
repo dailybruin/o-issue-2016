@@ -39,3 +39,25 @@
 
 html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
+
+
+
+
+
+
+
+
+
+.tile-container {
+  display: flex;
+  width: 1500px;
+
+}
+
+.tile-container li {
+  list-style: none;
+  width: 400px;
+  height: 200px;
+  background: red;
+  margin-right: 30px;
+}

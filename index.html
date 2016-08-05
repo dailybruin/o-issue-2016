@@ -21,12 +21,13 @@
   <!-- Handlebars CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
-  <!-- Our own JS and CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script type="text/javascript" src="js/scrollview.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <link rel="stylesheet" href="bower_components/fluffy.js/dist/fluffy.min.css">
+  
 </head>
 <body>
+
+  <div style="height: 1000px;"></div>
   <!-- This code is where the article preview boxes and landing page will be -->
   <div class="container-fluid" data-role="page" id="main-page">
     <div class="row header">
@@ -34,6 +35,23 @@
       <!-- remove the image below later -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Pleiades_large.jpg" style="display:block; margin:auto; height: 1000px; width: 800px;"/>
     </div>
+    <div data-fluffy-container>
+      <div data-fluffy-content>
+        <ul class="tile-container">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    
     <div class="row">
       <div data-position="right" class="notViewed animBlock floatr">
         <h3>One Article</h3>
@@ -77,7 +95,7 @@
     </div>
     <div id="handlebars-content"></div>
     <div data-role="main" class="ui-content">
-    <a href="#" data-rel="back" data-transition="slide" data-direction="reverse">GO BACK TO MAIN PAGE(reversed)</a>
+      <a href="#" data-rel="back" data-transition="slide" data-direction="reverse">GO BACK TO MAIN PAGE(reversed)</a>
     </div>
   </div> <!-- end container -->
 
@@ -88,6 +106,9 @@
       The headline is {{ this.gsx$articleheadline.$t }}. The author name is {{this.gsx$authors.$t}}.
     </div>
     {{/each}}
-   </script>
+  </script>
+  <script type="text/javascript" src="bower_components/fluffy.js/dist/fluffy.min.js"></script>
+  <script type="text/javascript" src="js/scrollview.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
