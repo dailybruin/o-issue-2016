@@ -34,16 +34,6 @@
         <div data-fluffy-container>
           <div data-fluffy-content>
             <ul id="tile-container">
-              <!-- <li><p><a href="#article0" data-transition="fade">Article0</a></p></li>
-              <li><p><a href="#article1" data-transition="fade">Article1</a></p></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li> -->
             </ul>
           </div>
         </div>
@@ -59,7 +49,7 @@
 
   <script id="thumbnail" type="text/x-handlebars-template">
     {{#each .}}
-    <li><p><a href="#article0" data-transition="fade">Article0</a></p></li>
+    <li><p><a href="#article{{@index}}" data-transition="fade">Article{{@index}}</a></p></li>
     {{/each}}
     
   </script>
