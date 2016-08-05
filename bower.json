@@ -1,0 +1,11 @@
+{
+  "name": "o-issue",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "fluffy.js": "^2.0.3"
+  }
+}

@@ -7,7 +7,6 @@
 
   <!-- Include meta tag to ensure proper rendering and touch zooming -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <!-- Include jQuery Mobile stylesheets -->
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <!-- Include the jQuery library -->
@@ -15,15 +14,15 @@
   <!-- Include the jQuery Mobile library -->
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-  <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
   <!-- Handlebars CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
+  <link rel="stylesheet" href="bower_components/fluffy.js/dist/fluffy.min.css">
   <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
+  <script type="text/javascript" src="bower_components/fluffy.js/dist/fluffy.min.js"></script>
+
   <!-- Our own JS and CSS -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script type="text/javascript" src="js/scrollview.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -31,9 +30,26 @@
   <!-- This code is where the article preview boxes and landing page will be -->
   <div class="container" data-role="page" id="main-page">
     <div class="row header">
-      <h1>Orientation Issue</h1>
-      <!-- remove the image below later -->
+      <h1>Orientation Issue 2016</h1>
+      <div data-fluffy-container>
+        <div data-fluffy-content>
+          <ul class="tile-container">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+
     <div class="row">
       <div class="notViewed">
         <h3>One Article</h3>
@@ -182,6 +198,6 @@
       </div>
     </div>
     {{/each}}
-   </script>
+  </script>
 </body>
 </html>
