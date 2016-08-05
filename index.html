@@ -30,22 +30,16 @@
   <div class="container" data-role="page" id="main-page">
     <div class="row header">
       <h1 class="main-title">Orientation Issue 2016</h1>
-      <div data-fluffy-container>
-        <div data-fluffy-content>
-          <ul class="tile-container">
-            <li><p><a href="#article0" data-transition="fade">Article0</a></p></li>
-            <li><p><a href="#article1" data-transition="fade">Article1</a></p></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+      <div id="tile-wrapper">
+        <div data-fluffy-container>
+          <div data-fluffy-content>
+            <ul id="tile-container">
+            </ul>
+          </div>
         </div>
+        
       </div>
+      
     </div>
   </div> <!-- End div for main page with article preview box and landing page -->
 
@@ -53,8 +47,16 @@
   <div id="handlebars-content"></div>
   <!-- end container -->
 
+  <script id="thumbnail" type="text/x-handlebars-template">
+    {{#each .}}
+    <li><p><a href="#article{{@index}}" data-transition="fade">Article{{@index}}</a></p></li>
+    {{/each}}
+    
+  </script>
+
+
   <!-- Handle bar template content - this is what each article is gonna look like -->
-  <script id="handlebars" type="text/x-handlebars-template">
+  <script id="article" type="text/x-handlebars-template">
     {{#each .}}
     <div data-role="page" id="article{{@index}}">
       <div class="container-fluid">
