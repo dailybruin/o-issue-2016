@@ -3,6 +3,30 @@
     overflow-y: hidden;
 }
 
+.styled-button {
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	color:#333;
+	background-color:#FA2;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:none;
+	font-family:'Helvetica Neue',Arial,sans-serif;
+	font-size:16px;
+	font-weight:700;
+	height:36px;
+	padding:4px 16px;
+	text-shadow:#FE6 0 1px 0
+}
+
+.navbar{
+  position: fixed;
+  z-index: 10;
+  height: 30px;
+}
+
 .image-section{
   padding: 60px 0px;
 }

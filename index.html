@@ -17,8 +17,8 @@
   <!-- Handlebars CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
-  <link rel="stylesheet" href="bower_components/fluffy.js/dist/fluffy.min.css">
-  <script type="text/javascript" src="bower_components/fluffy.js/dist/fluffy.min.js"></script>
+  <!-- <link rel="stylesheet" href="bower_components/fluffy.js/dist/fluffy.min.css">
+  <script type="text/javascript" src="bower_components/fluffy.js/dist/fluffy.min.js"></script> -->
 
   <!-- Our own JS and CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -58,7 +58,9 @@
     {{#each .}}
     <div data-role="page" id="article{{@index}}">
       <div class="container-fluid">
-        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="10">
+        <div class="row navbar">
+          <input type="submit" class="styled-button-1" value="Back to Orientation Issue!" />
+        </div>
         <div class="row">
           <div class="col-lg-5 col-lg-offset-1 image-section">
             <img src="{{this.gsx$mainimage.$t}}" class="article-image"/>
