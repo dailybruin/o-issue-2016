@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
   //lets get some google spreadsheet data :D
   $.ajax({
     dataType: "json",
@@ -7,36 +6,52 @@ $( document ).ready(function() {
   	success: function(data) {
   			data = data.feed.entry;
 
-        // The code below is for handlebars ---===
-        // Retrieve the template data from the HTML (jQuery is used here).
+        //articles
         var template = $('#article').html();
-        // Compile the template data into a function
         var templateScript = Handlebars.compile(template);
-        console.log(templateScript)
         var context = data;
-        // html = 'My name is Ritesh Kumar. I am a developer.'
         var html = templateScript(context);
-        // Insert the HTML code into the page
-        $("#handlebars-content").replaceWith(html);
+        $("#handlebars-content").append(html);
 
-
-
+        //fluffy boxes
         var template2 = $('#thumbnail').html();
         var templateScript2 = Handlebars.compile(template2);
         var html2 = templateScript2(context);
         $('#tile-container').append(html2);
 
-
-
   	}
   });
 
-  //for page transition to article
-  $(document).on('click', '.link', function(e) {
-      console.log($(this).attr('href'));
+  //deep links
+  $(document).ajaxStop(function() {
+    currentURL = window.location.href;
+    //check if # is in the url...
+    if (currentURL.indexOf("#") != -1){
+      articleID = currentURL.substring(currentURL.indexOf("#"), currentURL.length);
+      withoutHash = articleID.substring(1, articleID.length)
+      $(articleID).toggleClass("visible hidden");
+    }
+    else{
+      $('#main-page').toggleClass("visible hidden");
+    }
+  });
+
+  //for main-page to article
+  $(document).on('click', '.articleLink', function(e) {
       var articleID = $(this).attr('href')
-      $(articleID).removeClass('hidden');
-      $("#main-page").addClass('hidden');
+      $(articleID).toggleClass("visible hidden");
+      $('#main-page').toggleClass("visible hidden");
+      window.history.pushState("", "", this.href);
+      e.preventDefault();
+  });
+
+  //for article back to main-page
+  $(document).on('click', '.styled-button-1', function(e) {
+      var articleID = $(this).parents().eq(2);
+      $(articleID).toggleClass("visible hidden");
+      $('#main-page').toggleClass("visible hidden");
+      var url = (window.location.href ).substring(0, (window.location.href).indexOf("#"));
+      window.history.pushState("", "", url);
       e.preventDefault();
   });
 

@@ -1,11 +1,23 @@
-.hidden{
-  display: none;
+/* ===FADE TRANSITION===== */
+
+.visible {
+  opacity: 1;
+  transition: opacity .75s linear;
 }
 
-#main-page{
-  /*jquery mobile's frame causes an overflow, dont know why =/ */
-    overflow-y: hidden;
+.hidden{
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
 }
+
+/* ===END TRANSITION===== */
+
+/* ===ARTICLE STYLING===== */
 
 .styled-button {
 	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
