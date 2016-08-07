@@ -46,7 +46,7 @@ $( document ).ready(function() {
   });
 
   //for article back to main-page
-  $(document).on('click', '.styled-button-1', function(e) {
+  $(document).on('click', '.button-one', function(e) {
       var articleID = $(this).parents().eq(2);
       $(articleID).toggleClass("visible hidden");
       $('#main-page').toggleClass("visible hidden");

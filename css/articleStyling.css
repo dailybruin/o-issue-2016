@@ -1,5 +1,4 @@
 /* ===FADE TRANSITION===== */
-
 .visible {
   opacity: 1;
   transition: opacity .75s linear;
@@ -37,6 +36,37 @@
 	text-shadow:#FE6 0 1px 0
 }
 
+.button-one {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.button-one:hover {
+  cursor: pointer;
+}
+
+.button-two {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.button-two-link {
+  text-decoration: none;
+}
+
+.button-two-link:visited {
+  text-decoration: none;
+  color: white;
+}
+
 .navbar{
   position: fixed;
   z-index: 10;
@@ -53,6 +83,7 @@
 
 .main-story{
   font-size: 18px;
+  padding: 30px;
 }
 
 .article-image{
@@ -64,8 +95,4 @@
 .back-section{
   margin-top: 30px;
   margin-bottom: 20px;
-}
-
-.back-button{
-  text-align:center;
 }
