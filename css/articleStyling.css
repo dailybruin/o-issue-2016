@@ -73,23 +73,29 @@
   height: 30px;
 }
 
+/*
 .image-section{
   padding: 60px 0px;
 }
+*/
 
 .header-section{
-  padding: 150px 0px;
+  padding: 0px 0px;
+}
+
+.header-section h1, h3 {
+  margin-left: 25px;
 }
 
 .main-story{
   font-size: 18px;
-  padding: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .article-image{
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  float: left;
 }
 
 .back-section{
