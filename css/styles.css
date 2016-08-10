@@ -1,9 +1,10 @@
-html, body {
-  height: 100%;
-  width: 100%;
+body {
+  background: url('../img/oissuecoveredit.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
 }
 
-.container {
+/*.container {
   height: 100%;
 }
 
@@ -16,10 +17,9 @@ html, body {
   top: 0;
   left: 0;
 
-  /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
-}
+}*/
 
 .main-title {
    text-align: center;

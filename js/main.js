@@ -1,3 +1,6 @@
+var backgroundImage = $("body").css("background");
+$("body").css("background","none");
+
 $( document ).ready(function() {
   //lets get some google spreadsheet data :D
   $.ajax({
@@ -22,6 +25,8 @@ $( document ).ready(function() {
   	}
   });
 
+
+
   //deep links
   $(document).ajaxStop(function() {
     currentURL = window.location.href;
@@ -30,9 +35,11 @@ $( document ).ready(function() {
       articleID = currentURL.substring(currentURL.indexOf("#"), currentURL.length);
       withoutHash = articleID.substring(1, articleID.length)
       $(articleID).toggleClass("visible hidden");
+      $("body").css("background","none");
     }
     else{
       $('#main-page').toggleClass("visible hidden");
+      $("body").css("background", backgroundImage);
     }
   });
 
@@ -42,6 +49,7 @@ $( document ).ready(function() {
       $(articleID).toggleClass("visible hidden");
       $('#main-page').toggleClass("visible hidden");
       window.history.pushState("", "", this.href);
+      $("body").css("background","none");
       e.preventDefault();
   });
 
@@ -52,6 +60,7 @@ $( document ).ready(function() {
       $('#main-page').toggleClass("visible hidden");
       var url = (window.location.href ).substring(0, (window.location.href).indexOf("#"));
       window.history.pushState("", "", url);
+      $("body").css("background", backgroundImage);
       e.preventDefault();
   });
 
