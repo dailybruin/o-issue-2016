@@ -30,7 +30,10 @@ $( document ).ready(function() {
         var template2 = $('#tile').html();
         var templateScript2 = Handlebars.compile(template2);
         var html2 = templateScript2(context);
+
+        // $('#tile-container').css('width', 350 * data.length)
         $('#tile-container').append(html2);
+
 
 
         $('#tile-container').hover(function() {
