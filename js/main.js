@@ -1,5 +1,4 @@
 var backgroundImage = $("body").css("background");
-$("body").css("background","none");
 
 $( document ).ready(function() {
   //lets get some google spreadsheet data :D
@@ -10,7 +9,6 @@ $( document ).ready(function() {
   			data = data.feed.entry;
 
 
-        $('#tile-container').css('width', data.length * 350);
         // The code below is for handlebars ---===
         // Retrieve the template data from the HTML (jQuery is used here).
 
@@ -25,8 +23,9 @@ $( document ).ready(function() {
         var templateScript2 = Handlebars.compile(template2);
         var html2 = templateScript2(context);
 
-        // $('#tile-container').css('width', 350 * data.length)
+        // $('#tile-container').css('width', data.length * 350);
         $('#tile-container').append(html2);
+
 
 
         $('#tile-container').hover(function() {
@@ -50,23 +49,23 @@ $( document ).ready(function() {
 
 
   //deep links
-  $(document).ajaxStop(function() {
-    currentURL = window.location.href;
-    //check if # is in the url...
-    if (currentURL.indexOf("#") != -1){
-      articleID = currentURL.substring(currentURL.indexOf("#"), currentURL.length);
-      withoutHash = articleID.substring(1, articleID.length)
-      $(articleID).toggleClass("visible hidden");
-      $("body").css("background","none");
-    }
-    else{
-      $('#main-page').toggleClass("visible hidden");
-      $("body").css("background", backgroundImage);
-    }
-  });
+  // $(document).ajaxStop(function() {
+  //   currentURL = window.location.href;
+  //   //check if # is in the url...
+  //   if (currentURL.indexOf("#") != -1){
+  //     articleID = currentURL.substring(currentURL.indexOf("#"), currentURL.length);
+  //     withoutHash = articleID.substring(1, articleID.length)
+  //     $(articleID).toggleClass("visible hidden");
+  //     $("body").css("background","none");
+  //   }
+  //   else{
+  //     $('#main-page').toggleClass("visible hidden");
+  //     $("body").css("background", backgroundImage);
+  //   }
+  // });
 
   //for main-page to article
-  $(document).on('click', '.articleLink', function(e) {
+  $(document).on('click', '.tile', function(e) {
       var articleID = $(this).attr('href')
       $(articleID).toggleClass("visible hidden");
       $('#main-page').toggleClass("visible hidden");
