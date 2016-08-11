@@ -49,20 +49,25 @@ $( document ).ready(function() {
 
 
   //deep links
-  // $(document).ajaxStop(function() {
-  //   currentURL = window.location.href;
-  //   //check if # is in the url...
-  //   if (currentURL.indexOf("#") != -1){
-  //     articleID = currentURL.substring(currentURL.indexOf("#"), currentURL.length);
-  //     withoutHash = articleID.substring(1, articleID.length)
-  //     $(articleID).toggleClass("visible hidden");
-  //     $("body").css("background","none");
-  //   }
-  //   else{
-  //     $('#main-page').toggleClass("visible hidden");
-  //     $("body").css("background", backgroundImage);
-  //   }
-  // });
+  $(document).ajaxStop(function() {
+    currentURL = window.location.href;
+    //check if # is in the url...
+    if (currentURL.indexOf("#") != -1){
+      var articleID = currentURL.substring(currentURL.indexOf("#"), currentURL.length);
+      // console.log(articleID)
+      // withoutHash = articleID.substring(1, articleID.length)
+      $(articleID).removeClass("hidden");
+      $('#main-page').removeClass("visible");
+      $('#main-page').addClass("hidden");
+      $("body").css("background","none");
+    }
+    else{
+      console.log('else')
+      $('#main-page').removeClass("hidden");
+
+      // $("body").css("background", backgroundImage);
+    }
+  });
 
   //for main-page to article
   $(document).on('click', '.tile', function(e) {
