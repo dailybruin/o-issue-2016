@@ -9,19 +9,41 @@ $( document ).ready(function() {
   	success: function(data) {
   			data = data.feed.entry;
 
-        //articles
+
+        $('#tile-container').css('width', data.length * 350);
+        // The code below is for handlebars ---===
+        // Retrieve the template data from the HTML (jQuery is used here).
+
         var template = $('#article').html();
         var templateScript = Handlebars.compile(template);
         var context = data;
         var html = templateScript(context);
         $("#handlebars-content").append(html);
 
-        //fluffy boxes
-        var template2 = $('#thumbnail').html();
+
+        var template2 = $('#tile').html();
         var templateScript2 = Handlebars.compile(template2);
         var html2 = templateScript2(context);
+
+        // $('#tile-container').css('width', 350 * data.length)
         $('#tile-container').append(html2);
 
+
+        $('#tile-container').hover(function() {
+          $('.tile').hover(function() {
+            $(this).css({
+              "opacity": "1"
+            })
+            $(this).siblings().css({
+              "opacity" : "0.4"
+            });
+          });
+
+        }, function() {
+          $(this).children().css({
+            "opacity" : "1"
+          });
+        });
   	}
   });
 

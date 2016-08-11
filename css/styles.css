@@ -42,9 +42,10 @@ html[xmlns] .clearfix { display: block; }
 
 #tile-container li {
   list-style: none;
-  width: 400px;
+  width: 300px;
   height: 200px;
   background: red;
+  background-size: cover;
   margin-right: 30px;
 }
 

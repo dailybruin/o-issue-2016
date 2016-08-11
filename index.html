@@ -13,16 +13,18 @@
   <!-- Handlebars CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
-  <!-- <link rel="stylesheet" href="bower_components/fluffy.js/dist/fluffy.min.css">
-  <script type="text/javascript" src="bower_components/fluffy.js/dist/fluffy.min.js"></script> -->
+  <link rel="stylesheet" href="bower_components/fluffy.js/dist/fluffy.min.css">
+  <script type="text/javascript" src="bower_components/fluffy.js/dist/fluffy.min.js"></script>
 
   <!-- Our own JS and CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/articleStyling.css">
+  <link rel="stylesheet" type="text/css" href="css/extra.css">
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
   <!-- This code is where the article preview boxes and landing page will be -->
-  <div class="container hidden" id="main-page">
+  <div class="container" id="main-page">
     <div class="row header">
       <h1 class="main-title">Orientation Issue 2016</h1>
       <div id="tile-wrapper">
@@ -42,9 +44,9 @@
   <div id="handlebars-content"></div>
   <!-- end container -->
 
-  <script id="thumbnail" type="text/x-handlebars-template">
+  <script id="tile" type="text/x-handlebars-template">
     {{#each .}}
-    <li><a href="#article{{@index}}" class="articleLink"> Article{{@index}}</a></li>
+    <a class="tile" href="#article{{@index}}"><li style="background-image: url('{{this.gsx$mainimage.$t}}')"><p>Article{{@index}}</p></li></a>
     {{/each}}
   </script>
 
