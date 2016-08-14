@@ -23,6 +23,8 @@ body {
    min-width: 300px;
    background-color: rgba(255, 255, 255, 0.8);
    color: black;
+   font-family: 'Lato', sans-serif;
+   letter-spacing: 2px;
  }
 
 html[xmlns] .clearfix { display: block; }
