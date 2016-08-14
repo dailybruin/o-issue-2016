@@ -13,6 +13,9 @@
   <!-- Handlebars CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
   <link rel="stylesheet" href="bower_components/fluffy.js/dist/fluffy.min.css">
   <script type="text/javascript" src="bower_components/fluffy.js/dist/fluffy.min.js"></script>
 
@@ -58,7 +61,7 @@
         <div class="row navbar">
           <input type="submit" href="#main-page" class="button-one" value="Back" />
         </div>
-        <div class="row">
+        <div class="row title-section">
           <div class="col-lg-5 col-lg-offset-1 image-section">
             <img src="{{this.gsx$mainimage.$t}}" class="article-image"/>
           </div>
@@ -67,7 +70,7 @@
             <h3>by {{ this.gsx$authors.$t }}</h3>
           </div>
         </div>
-        <div class="row">
+        <div class="row content-section">
           <div class="col-lg-3">
             <!--Pictures here-->
           </div>
@@ -82,7 +85,6 @@
           <div class="col-lg-6 col-lg-offset-3 back-button" >
           </div>
         </div>
-        <button class="button-two"><a href="#main-page" class="button-two-link" data-transition="fade">Back</a></button>
       </div>
     </div>
     {{/each}}
