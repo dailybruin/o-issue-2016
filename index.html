@@ -98,16 +98,24 @@
           </div>
         </div>
         <div class="row content-section">
-          <div class="col-lg-3 left-images">
+          <div class="col-lg-3">
             <!--Pictures here-->
-            {{ this.gsx$extrapic1.$t }}
+            {{#if this.gsx$extrapic1.$t}}
+            <div class="left-images">
+              {{ this.gsx$extrapic1.$t }}
+            </div>
+            {{/if}}
           </div>
           <div class="col-lg-6 main-story">
             {{{ this.gsx$articlecontent.$t }}}
           </div>
-          <div class="col-lg-3 right-images">
+          <div class="col-lg-3">
             <!--Pictures here-->
-            {{ this.gsx$extrapic2.$t }}
+            {{#if this.gsx$extrapic2.$t}}
+            <div class="right-images">
+              {{ this.gsx$extrapic2.$t }}
+            </div>
+            {{/if}}
           </div>
         </div>
         <div class="row back-section">
