@@ -90,22 +90,22 @@
             <img src="{{this.gsx$mainimage.$t}}" class="article-image"/>
           </div>
           <div class="col-lg-4 col-lg-offset-1 header-section" >
-            <h1>{{ this.gsx$articleheadline.$t }}</h1>
+            <h1 class="headline">{{ this.gsx$articleheadline.$t }}</h1>
             {{#if this.gsx$authors.$t}}
-              <h3>by {{ this.gsx$authors.$t }}</h3>
+              <h3 class="byline">by {{ this.gsx$authors.$t }}</h3>
             {{/if}}
-            <h3 class="image-caption-text">Image credits: {{ this.gsx$photoillographiccredit.$t }}</h3>
+            <h3 class="image-caption-text">Image credits: ({{ this.gsx$photoillographiccredit.$t }})</h3>
           </div>
         </div>
         <div class="row content-section">
-          <div class="col-lg-3">
+          <div class="col-lg-3 left-images">
             <!--Pictures here-->
             {{ this.gsx$extrapic1.$t }}
           </div>
           <div class="col-lg-6 main-story">
             {{{ this.gsx$articlecontent.$t }}}
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 right-images">
             <!--Pictures here-->
             {{ this.gsx$extrapic2.$t }}
           </div>

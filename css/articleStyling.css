@@ -92,11 +92,11 @@
   align-items: stretch;
 }
 
-.header-section h1 {
+.header-section .headline {
   font-size: 46px;
 }
 
-.header-section h3 {
+.header-section .byline {
   margin-top: 70px;
   font-size: 22px;
 }
@@ -127,10 +127,18 @@
   margin-bottom: 20px;
 }
 
-.image-caption-text{
-  font-size: 20px;
+.image-caption-text {
+  font-size: 12px;
   color: gray;
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.left-images{
+  margin-top: 100px;
+}
+
+.right-images{
+  margin-top: 450px;
 }
