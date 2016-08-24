@@ -81,6 +81,7 @@
 
 .title-section{
   margin-top: 40px;
+  display: flex;
 }
 
 .header-section{
@@ -88,6 +89,7 @@
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
   margin-left: 20px;
+  align-items: stretch;
 }
 
 .header-section h1 {
@@ -125,8 +127,10 @@
   margin-bottom: 20px;
 }
 
-.bottom-align-text{
+.image-caption-text{
+  font-size: 20px;
+  color: gray;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
 }

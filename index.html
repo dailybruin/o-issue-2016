@@ -72,7 +72,7 @@
 
   <script id="tile" type="text/x-handlebars-template">
     {{#each .}}
-    <a class="tile" href="#article{{@index}}"><li style="background-image: url('{{this.gsx$mainimage.$t}}')"><p>Article{{@index}}</p></li></a>
+    <a class="tile" href="#article{{@index}}"><li style="background-image: url('{{this.gsx$mainimage.$t}}')"></li></a>
     {{/each}}
   </script>
 
@@ -86,7 +86,7 @@
           <input type="submit" href="#main-page" class="button-one" value="Back" />
         </div>
         <div class="row title-section">
-          <div class="col-lg-5 col-lg-offset-1 image-section">
+          <div class="col-lg-4 col-lg-offset-2 image-section">
             <img src="{{this.gsx$mainimage.$t}}" class="article-image"/>
           </div>
           <div class="col-lg-4 col-lg-offset-1 header-section" >
@@ -94,18 +94,20 @@
             {{#if this.gsx$authors.$t}}
               <h3>by {{ this.gsx$authors.$t }}</h3>
             {{/if}}
-            <h3 class="bottom-align-text">Image credits: {{ this.gsx$photoillographiccredit.$t }}</h3>
+            <h3 class="image-caption-text">Image credits: {{ this.gsx$photoillographiccredit.$t }}</h3>
           </div>
         </div>
         <div class="row content-section">
           <div class="col-lg-3">
             <!--Pictures here-->
+            {{ this.gsx$extrapic1.$t }}
           </div>
           <div class="col-lg-6 main-story">
             {{{ this.gsx$articlecontent.$t }}}
           </div>
           <div class="col-lg-3">
             <!--Pictures here-->
+            {{ this.gsx$extrapic2.$t }}
           </div>
         </div>
         <div class="row back-section">

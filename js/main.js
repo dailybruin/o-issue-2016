@@ -62,7 +62,6 @@ $( document ).ready(function() {
       $("body").css("background","none");
     }
     else{
-      console.log('else')
       $('#main-page').removeClass("hidden");
 
       // $("body").css("background", backgroundImage);
