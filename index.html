@@ -91,8 +91,9 @@
           </div>
           <div class="col-lg-4 col-lg-offset-1 header-section" >
             <h1>{{ this.gsx$articleheadline.$t }}</h1>
-
-            <h3>by {{ this.gsx$authors.$t }}</h3>
+            {{#if this.gsx$authors.$t}}
+              <h3>by {{ this.gsx$authors.$t }}</h3>
+            {{/if}}
             <h3 class="bottom-align-text">Image credits: {{ this.gsx$photoillographiccredit.$t }}</h3>
           </div>
         </div>
