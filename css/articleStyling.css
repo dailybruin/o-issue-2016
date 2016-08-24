@@ -87,10 +87,16 @@
   padding: 0px 0px;
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
+  margin-left: 20px;
 }
 
-.header-section h1, h3 {
-  margin-left: 25px;
+.header-section h1 {
+  font-size: 46px;
+}
+
+.header-section h3 {
+  margin-top: 70px;
+  font-size: 22px;
 }
 
 .content-section{
