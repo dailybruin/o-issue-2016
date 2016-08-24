@@ -35,12 +35,18 @@ body {
   left: 0;
   text-align: center;
   border: 1px solid white;
-  padding: 20px;
+  padding: 10px;
   margin: 0px 80px 13px;
   display: block;
   min-width: 300px;
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
+}
+
+.footer-text{
+  font-size: 11px;
+  color: gray;
+  margin-top: 20px;
 }
 
 html[xmlns] .clearfix { display: block; }
@@ -63,7 +69,7 @@ html[xmlns] .clearfix { display: block; }
   list-style: none;
   width: 300px;
   height: 200px;
-  background: red;
+  background: transparent;
   background-size: cover;
   margin-right: 30px;
 }
