@@ -60,7 +60,7 @@ html[xmlns] .clearfix { display: block; }
 
 #tile-container {
   display: flex;
-  width: 1500px;
+  width: 5000px;
   padding-left: 0px;
 
 }

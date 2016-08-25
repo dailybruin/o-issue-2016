@@ -136,9 +136,17 @@
 }
 
 .left-images{
-  margin-top: 100px;
+  margin-top: 400px;
 }
 
 .right-images{
-  margin-top: 450px;
+  margin-top: 1700px;
+}
+
+.left-pic{
+  max-width: 100%;
+}
+
+.right-pic{
+  max-width: 100%;
 }
