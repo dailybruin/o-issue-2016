@@ -90,6 +90,11 @@ html[xmlns] .clearfix { display: block; }
   width: 75%;
 }
 
+.helper-text{
+  font-size: 12px;
+  color: gray;
+}
+
 @media screen and (min-width: 300px) and (max-width: 1000px) {
   .main-page-bottom{
     color: black;
@@ -103,8 +108,13 @@ html[xmlns] .clearfix { display: block; }
     margin: 0px 20px 5px;
     display: block;
     min-width: 150px;
-    max-height: 150px;
+    max-height:
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
+  }
+
+  .helper-text{
+    font-size: 7px;
+    color: gray;
   }
 }
