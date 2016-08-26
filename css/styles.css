@@ -95,8 +95,23 @@ html[xmlns] .clearfix { display: block; }
 }
 
 @media screen and (min-width: 300px) and (max-width: 1000px) {
+
+  .main-title {
+     text-align: center;
+     border: 1px solid white;
+     font-size: 22px;
+     padding: 10px;
+     margin: 0 auto;
+     display: block;
+     min-width: 200px;
+     background-color: rgba(255, 255, 255, 0.8);
+     color: black;
+     font-family: 'Lato', sans-serif;
+     letter-spacing: 2px;
+   }
+
+
   .main-page-bottom{
-    color: black;
     font-size: 8px;
     position: absolute;
     bottom: 0;
@@ -104,10 +119,9 @@ html[xmlns] .clearfix { display: block; }
     text-align: center;
     border: 1px solid white;
     padding: 10px;
-    margin: 0px 20px 5px;
+    margin: 20px 10px 2px;
     display: block;
-    min-width: 150px;
-    max-height:
+    min-width: 175px;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
   }
@@ -115,5 +129,10 @@ html[xmlns] .clearfix { display: block; }
   .helper-text{
     font-size: 7px;
     color: gray;
+  }
+
+  .footer-text{
+    margin: 0px;
+    font-size: 7px;
   }
 }
