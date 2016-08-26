@@ -58,6 +58,7 @@ html[xmlns] .clearfix { display: block; }
 }
 
 #tile-container {
+  margin-top: -40px;
   display: flex;
   width: 5000px;
   padding-left: 0px;
